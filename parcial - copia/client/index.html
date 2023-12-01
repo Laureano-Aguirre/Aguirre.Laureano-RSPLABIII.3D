@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Butcherman&family=Rock+Salt&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/estilo.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <header>
+        <nav class="nav-header">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#" id="nav-header-monstruos">Monstruos</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="division"><h1>CRUD de las BESTIAS!</h1></div>
+
+    <main>
+        <div class="contenedor-imagen">
+            <img src="./images/img-main2.png" alt="imagen del main" class="imagen-main">
+            <div class="container-card">
+                <div class="row-card">
+                    <div class="col-card">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <div class="card-title">Informacion Monstruos</div>
+                                <div class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur eveniet in, similique sed cupiditate, eligendi incidunt deserunt rem suscipit minus nostrum! Molestias veniam magni corporis!</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="formulario" id="formulario-container">
+                <h2>Informacion del mounstro</h2>
+                <form id="formulario">
+                    <div class="div-datosMounstro">
+                        <label for="txbNombre"><i class="fa-solid fa-mask"></i> Nombre:</label>
+                        <input type="text" id="txbNombre" name="nombre" placeholder="Ingrese nombre">
+
+                        <label for="txbAlias"><i class="fa-solid fa-mask"></i> Alias:</label>
+                        <input type="text" id="txbAlias" name="alias" placeholder="Ingrese Alter-Ego">
+
+                        <label for="radio-group"><i class="fa-solid fa-shield"></i> Defensa:</label>
+                        <div class="radio-group">
+                            <div class="radio-item">
+                                <input type="radio" id="pociN" name="rdbDefensa" value="Poción">
+                                <label for="pociN">Poción</label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" id="crucifijo" name="rdbDefensa" value="Crucifijo">
+                                <label for="crucifijo">Crucifijo</label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" id="estaca" name="rdbDefensa" value="Estaca">
+                                <label for="estaca">Estaca</label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" id="plata" name="rdbDefensa" value="Plata">
+                                <label for="plata">Plata</label>
+                            </div>
+                        </div>
+
+                        <label for="rngMiedo"><i class="fa-solid fa-ghost"></i> Miedo:</label>
+                        <input type="range" id="rngMiedo" name="miedo" min="0" max="100">
+
+                        <label for="cmbTipo"><i class="fa-brands fa-optin-monster"></i> Tipo</label>
+                        <select name="tipo" id="cmbTipo">
+                            <option value="esqueleto">Esqueleto</option>
+                            <option value="zombie">Zombie</option>
+                            <option value="vampiro">Vampiro</option>
+                            <option value="fantasma">Fantasma</option>
+                            <option value="bruja">Bruja</option>
+                            <option value="hombreLobo">Hombre Lobo</option>
+                        </select>
+                        <button type="button" id="guardarButton">
+                            <i class="fa-regular fa-floppy-disk"></i>
+                            Guardar
+                        </button>
+
+                    </div>
+
+                </form>
+                <div class="loader">
+                    <section class ="loader-section">
+                        <img id="loader" src="./assets/loader.gif" alt="loader spinner" class="oculto">
+                    </section>
+                </div>
+            </div>
+            
+            <section class="container-filtrar-tabla">
+                <div class="dropdown">
+                    
+                    <label for="filtroTipo">Filtrar por tipo</label>
+                    <button type="button" class="btn btn-primary dropdown-toggle" id="cmbTipo" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filtrar</button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" data-tipo="todos">Todos</a>
+                        <a class="dropdown-item" data-tipo="esqueleto">Esqueleto</a>
+                        <a class="dropdown-item" data-tipo="zombie">Zombie</a>
+                        <a class="dropdown-item" data-tipo="vampiro">Vampiro</a>
+                        <a class="dropdown-item" data-tipo="fantasma">Fantasma</a>
+                        <a class="dropdown-item" data-tipo="bruja">Bruja</a>
+                        <a class="dropdown-item" data-tipo="hombre lobo">Hombre Lobo</a>
+                    </div>
+                </div>
+                <div class="div-promedio-miedo">
+                    <label for="promedioMiedo">Promedio miedo</label>
+                    <input type="text" name="promedioMiedo" id="promedioMiedo" readonly>
+                </div>
+                <div class="div-maximo-miedo">
+                    <label for="maximoMiedo">Miedo maximo</label>
+                    <input type="text" name="maximoMiedo" id="maximoMiedo" readonly>
+                </div>
+                <div class="div-minimo-miedo">
+                    <label for="minimoMiedo">Miedo minimo</label>
+                    <input type="text" name="minimoMiedo" id="minimoMiedo" readonly>
+                </div>
+            </section>
+            <div class="chb-container">
+                <div class="checkbox-item">
+                    <input type="checkbox" checked>
+                    <label for="columnaNombre">NOMBRE</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" checked>
+                    <label for="columnaAlias">ALIAS</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" checked>
+                    <label for="columnaDefensa">DEFENSA</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" checked>
+                    <label for="columnaMied">MIEDO</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" checked>
+                    <label for="columnaTipo">TIPO</label>
+                </div>
+                
+            </div>
+            <div class="tabla-monstruo-conteiner" id="tabla-monstruos">
+                <div class="row-tabla-monstruos">
+                    <div class="col-nombre">Nombre</div>
+                    <div class="col-alias">Alias</div>
+                    <div class="col-defensa">Defensa</div>
+                    <div class="col-miedo">Miedo</div>
+                    <div class="col-tipo">Tipo</div>
+                    <div class="col-modificar">Modificar</div>
+                    <div class="col-borrar">Borrar</div>
+                    <div class="col-seleccionar">Seleccionar</div>
+                </div>
+            </div>            
+        </div>
+
+    </main>
+
+    <footer>
+        <nav class="nav-footer">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Monstruos</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="derecha">
+            <p>LABORATORIO III-TODOS LOS DERECHOS RESERVADOS 2023&copy;</p>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="./js/logica.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    
+</body>
+
+</html>

@@ -1,0 +1,321 @@
+
+header{
+    background: url(../images/img-header.png)no-repeat;
+    background-size: cover;
+    height: 260px;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    font-family: 'Creepster', sans-serif;
+    font-size: 25px;
+}
+
+body{
+    position: flex;
+    padding-bottom: 3;
+    min-height: 100vh;
+}
+
+main{
+    display: flex;
+    bottom: 0;
+    width: auto;
+}
+
+.imagen-main {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.nav-header{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.nav-footer{
+    display: flex;
+}
+
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    
+}
+nav ul li{
+    margin: 0 15px;
+    
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: chartreuse;
+    font-weight: bold;
+    align-items:center;
+}
+
+nav ul li a:hover{
+    color: aliceblue;
+}
+
+.division{
+    height: 40%;
+    width: 100%;
+    background-color:lightskyblue;
+    text-align: center;
+    font-family: 'Creepster', sans-serif;
+    font-size: 30px;
+    padding: 5px;
+}
+
+.contenedor-imagen {
+    position: relative;
+}
+
+.contenedor-imagen img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+h2{
+    font-family: 'Creepster', sans-serif;
+    color: chartreuse;
+}
+.div-datosMounstro label{
+    font-family: 'Creepster', sans-serif;
+    color: chartreuse;
+}
+
+input::placeholder {
+    font-family: 'Creepster', sans-serif;
+    color: #999;
+}
+
+.formulario {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    background-color:inherit;
+    padding: 20px;
+    border: 1px solid cyan;
+    border-radius: 10px;
+    text-align: left;
+    font-family: 'Creepster', sans-serif;
+}
+
+.formulario form {
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-gap: 10px;
+}
+
+.formulario label {
+    margin-bottom: 5px;
+}
+
+.formulario input,
+.formulario select{
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.radio-group {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+}
+.radio-item {
+    display: flex;
+    align-items: center;
+}
+.radio-item input {
+    margin-right: 10px;
+}
+
+select{
+    font-family: 'Creepster', sans-serif;
+}
+
+option{
+    font-family: 'Creepster', sans-serif;
+}
+
+button {
+    width: 20%; 
+    padding: 8px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    margin-right: auto; 
+    display: block;
+    background-color: blue;
+    color:white ;
+    font-family: 'Creepster', sans-serif;
+    font-size: 20px;
+}
+
+footer{
+    background-color: cornflowerblue;
+    color:chartreuse;
+    text-align: center;
+    padding: 1em;
+    display: flex;
+    justify-content:wrap; /*     position: absolute;*/
+    max-height: 60px;
+    height: 100%;
+    bottom: 0;
+    font-family: 'Creepster', sans-serif;
+    font-size: 20px;
+}
+
+footer nav {
+    display: flex;
+    justify-content: flex-start;
+    flex-grow: 1;
+}
+
+footer nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+footer nav ul li {
+    margin: 0 15px;
+}
+
+footer nav ul li a {
+    text-decoration: none;
+    color: chartreuse;
+    font-weight: bold;
+}
+
+footer nav ul li a:hover {
+    color: aliceblue;
+}
+
+.derecha{
+    text-align:right;
+    flex: 1;
+    order: 2;
+}
+
+section img {
+    border-radius: 50%;
+}
+
+.loader-section{
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: auto;
+    max-width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    border-radius: 50%;
+}
+
+.oculto{
+    display:none !important;
+    margin-top: 15px;
+}
+
+.container-filtrar-tabla{
+    font-family: 'Creepster', sans-serif;
+    background-color:orange;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 45px;
+    width: 100%;
+}
+
+.dropdown{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+}
+
+.div-promedio-miedo, .div-maximo-miedo, .div-minimo-miedo{
+    width: 100%;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+}
+
+.chb-container{
+    background-color:crimson;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 35px;
+    width: 100%;
+    font-family: 'Creepster', sans-serif;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.checkbox-item{    
+    width: 100%;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+}
+
+.tabla-monstruo-conteiner{
+    font-family: 'Creepster', sans-serif;
+    
+}
+
+.row-tabla-monstruos{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: end;
+    background-color: blueviolet;
+    color:moccasin;
+}
+
+.row-tabla-monstruos-datos {
+    background-color:white; 
+    color: black;
+    border-bottom: 1px solid red;
+}
+
+.col-nombre, .col-alias, .col-defensa, .col-miedo, .col-tipo, .col-modificar, .col-borrar, .col-seleccionar {
+    flex: 2;
+    height: 100%;
+}
+
+.col-modificar button, .col-borrar button, .col-seleccionar button {
+    width: 40%; 
+    background-color: rgb(255, 106, 0);
+}
+
+.container-card{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    background-size: cover;
+}
+
+.card-body{
+    background-color: rgb(177, 224, 115);
+}
+
