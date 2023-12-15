@@ -1,11 +1,11 @@
 {
   "monstruos": [
     {
+      "id": 1,
       "nombre": "alberto",
       "tipo": "esqueleto",
-      "id": 1,
       "alias": "Conde Vlad",
-      "miedo": "72",
+      "miedo": 72,
       "defensa": "Estaca"
     },
     {
@@ -13,23 +13,23 @@
       "nombre": "Frankenstein",
       "tipo": "zombie",
       "alias": "El monstruo",
-      "defensa": "ninguna",
-      "miedo": 75
+      "miedo": 75,
+      "defensa": "Estaca"
     },
     {
-      "id": 3,
-      "nombre": "Espectro",
+      "nombre": "Espectro espectrito",
       "tipo": "fantasma",
+      "id": 3,
       "alias": "Sombra Errante",
-      "defensa": "ninguna",
-      "miedo": 60
+      "miedo": "60",
+      "defensa": "Crucifijo"
     },
     {
       "id": 4,
       "nombre": "Hombre lobo",
       "tipo": "hombre lobo",
       "alias": "Bestia Lunar",
-      "defensa": "plata",
+      "defensa": "Plata",
       "miedo": 80
     },
     {
@@ -37,8 +37,8 @@
       "nombre": "Bruja Malvada",
       "tipo": "bruja",
       "alias": "Hechicera Oscura",
-      "defensa": "poción",
-      "miedo": 70
+      "defensa": "Poción",
+      "miedo": 82
     }
   ]
 }
